@@ -1,0 +1,28 @@
+.u-center-text {
+    text-align: center;
+}
+
+.u-margin-bottom-big {
+    margin-bottom: 8rem;
+}
+
+.u-margin-bottom-small {
+    margin-bottom: 1.5rem;
+}
+
+.u-margin-top.big {
+    margin-top: 8rem;
+}
+
+.u-margin-top.huge {
+    margin-top: 10rem;
+}
+
+// Green text gradient
+.u-text-gradient {
+    display: inline-block;
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
