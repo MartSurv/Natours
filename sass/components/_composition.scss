@@ -9,7 +9,7 @@
     // Photo composition effect
     &__photo {
         box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
-        border-radius: 2px;
+        border-radius: $default-border-radius;
         position: absolute;
         z-index: 1;
         transition: all .3s;
