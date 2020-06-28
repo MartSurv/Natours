@@ -4,9 +4,17 @@
     font-size: 1.4rem;
     color: $color-gray-dark;
 
+    @include respond(tab-port) {
+        padding: 8rem 0;
+    }
+
     &__logo-box {
         text-align: center;
         margin-bottom: 8rem;
+
+        @include respond(tab-port) {
+            margin-bottom: 4rem;
+        }
     }
 
     &__logo {
@@ -17,6 +25,11 @@
         border-top: 1px solid $color-gray-dark;
         padding-top: 2rem;
         display: inline-block;
+
+        @include respond(tab-port) {
+            width: 100%;
+            text-align: center;
+        }
     }
 
     &_list {
@@ -53,5 +66,11 @@
         padding-top: 2rem;
         float: right;
         width: 80%;
+
+        @include respond(tab-port) {
+            width: 100%;
+            float: none;
+            text-align: center;
+        }
     }
 }

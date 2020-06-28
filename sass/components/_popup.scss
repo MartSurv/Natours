@@ -1,14 +1,20 @@
 .popup {
     height: 100vh;
     width: 100%;
-    background-color: rgba($color-black, 0.8);
+    background-color: rgba($color-black, .8);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 130;
     opacity: 0;
     visibility: hidden;
-    transition: all .4s;
+    transition: all .4s ease-in;
+
+    @supports (-webkit-backdrop-filter: blur(8px)) or (backdrop-filter: blur(8px)) {
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        background-color: rgba($color-black, .3);
+    }
 
     &:target {
         opacity: 1;
@@ -47,6 +53,10 @@
         transition: all .4s;
         opacity: 0;
         transform: translate(-50%, -50%) scale(0);
+
+        @include respond(tab-port) {
+            width: 90%;
+        }
     }
 
     &:target &__content {
@@ -57,6 +67,10 @@
     &__left {
         width: 33.3333333%;
         display: table-cell;
+
+        @include respond(phone) {
+            display: none;
+        }
     }
 
     &__right {
@@ -79,9 +93,14 @@
         column-count: 2;
         column-gap: 4rem;
         column-rule: 1px solid $color-gray-light-2;
-        -moz-hyphens: auto;
-        -ms-hyphens: auto;
-        -webkit-hyphens: auto;
-        hyphens: auto;
+
+        @include respond(phone) {
+            -moz-column-count: 0;
+            -moz-column-gap: 0;
+            -moz-column-rule: none;
+            column-count: unset;
+            column-gap: 0;
+            column-rule: none;
+        }
     }
 }

@@ -1,6 +1,8 @@
 .heading-primary {
     color: $color-white;
     text-transform: uppercase;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     margin-bottom: 6rem;
 
@@ -12,6 +14,11 @@
         animation-name: moveInLeft;
         animation-duration: 1s;
         animation-timing-function: ease-out;
+
+        @include respond(phone) {
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
     }
 
     &--sub {
@@ -22,6 +29,10 @@
         animation-name: moveInRight;
         animation-duration: 1s;
         animation-timing-function: ease-out;
+
+        @include respond(phone) {
+            letter-spacing: .5rem;
+        }
     }
 }
 
@@ -29,6 +40,14 @@
     font-size: 3.5rem;
     font-weight: 700;
     text-transform: uppercase;
+
+    @include respond(tab-port) {
+        font-size: 3rem;
+    }
+
+    @include respond(phone) {
+        font-size: 2.5rem;
+    }
 }
 
 .heading-tertiary {
