@@ -13,3 +13,9 @@
         object-fit: cover;
     }
 }
+
+video {
+    @include respond(phone) {
+        display: none;
+    }
+}
