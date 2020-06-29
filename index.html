@@ -43,7 +43,7 @@
                 <span class="heading-primary--main">Outdoors</span>
                 <span class="heading-primary--sub">is where the life happens</span>
             </h1>
-            <a href="#" class="btn btn--white btn--animation">Discover our tours</a>
+            <a href="#tours" class="btn btn--white btn--animation">Discover our tours</a>
         </div>
     </header>
 
@@ -131,7 +131,7 @@
 
         <section class="section-tours" id="section-tours">
             <div class="u-center-text u-margin-bottom-big">
-                <h2 class="heading-secondary u-text-gradient">
+                <h2 class="heading-secondary u-text-gradient" id="tours">
                     Most popular tours
                 </h2>
             </div>
@@ -377,6 +377,12 @@
             </div>
         </div>
     </div>
+
+    <script>
+        window.addEventListener('load', function () {
+            document.getElementById('popup').style.display = 'block';
+        });
+    </script>
 
 </body>
 
