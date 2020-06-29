@@ -51,6 +51,7 @@
         display: table;
         overflow: hidden;
         transition: all .4s;
+        visibility: hidden;
         opacity: 0;
         transform: translate(-50%, -50%) scale(0);
 
@@ -60,6 +61,7 @@
     }
 
     &:target &__content {
+        visibility: visible;
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
     }

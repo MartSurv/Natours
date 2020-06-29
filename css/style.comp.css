@@ -566,12 +566,14 @@ body {
     display: table;
     overflow: hidden;
     transition: all .4s;
+    visibility: hidden;
     opacity: 0;
     transform: translate(-50%, -50%) scale(0); }
     @media only screen and (max-width: 56.25em) {
       .popup__content {
         width: 90%; } }
   .popup:target .popup__content {
+    visibility: visible;
     opacity: 1;
     transform: translate(-50%, -50%) scale(1); }
   .popup__left {
